@@ -7,14 +7,20 @@
 /* Paths */
 /* Grid setup */
 /* Colour palette */
-$black: #000;
-$white: #fff;
-$light-gray: #f1f1f1;
+$base-font-size: 16px;
+$small-font-size: 14px;
 
-$body-background-color: #333;
-$foreground-color: #fff;
-$caption-color: #464646;
-$accent-color: #999;
-$link-color: #ec1f4e;
+$font-family: 'Montserrat', 'sans-serif';
+
+$main-spacing: 20px;
+$max-width: 1000px;
+
+$color-primary: rgb(255, 152, 56);
+
+$breakpoints:(
+    xs: 500px,
+    sm: 800px,
+    md: 1000px
+)
 
 /* Components */
