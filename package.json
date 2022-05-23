@@ -1,24 +1,16 @@
 {
-  "author": "WeAreAthlon <hello@weareathlon.com> (https://www.weareathlon.com)",
-  "name": "@weareathlon/frontend-webpack-boilerplate",
-  "version": "5.13.0",
+  "author": "Piotr Matlak",
+  "name": "",
+  "version": "",
   "description": "Project",
-  "homepage": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate#readme",
+  "homepage": "",
   "browserslist": [
     "last 2 versions",
     "> 5%"
   ],
   "bugs": {
-    "url": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues",
-    "email": "plamen@athlonsofia.com"
+    "email": "piotr.matlak.contact@gmail.com"
   },
-  "contributors": [
-    {
-      "name": "Plamen Nikolov",
-      "email": "me@pnikoloff.com",
-      "url": "https://pnikoloff.com"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.0",

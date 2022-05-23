@@ -12,6 +12,6 @@
 
   &--logo {
       margin-right:  $main-spacing;
-      width: $main-spacing * 2 ;
+      width: calc($main-spacing * 2) ;
   }
 }
