@@ -1,13 +1,17 @@
 const values = [
-  { name: "Ananas", calories: 33, fat: 0, carbs: 11.8 },
-  { name: "Jabłko", calories: 57, fat: 0.7, carbs: 12.1 },
-  { name: "Pomarańcza", calories: 51, fat: 0.2, carbs: 11.3 },
-  { name: "Wiśnie", calories: 67, fat: 0.4, carbs: 14.6 },
+  { name: "pineapple", calories: 33, fat: 0, carbs: 11.8 },
+  { name: "apple", calories: 57, fat: 0.7, carbs: 12.1 },
+  { name: "orange", calories: 51, fat: 0.2, carbs: 11.3 },
+  { name: "cherries", calories: 67, fat: 0.4, carbs: 14.6 },
 ];
 
 const valuesContainer = document.querySelector(".app--values");
 
 const desktopVieport = window.matchMedia("screen and (min-width: 500px )");
+
+const drawValues = (isDesktop) => {
+  isDesktop ? drawDesktopValues() : drawMobileValues();
+};
 
 const drawMobileValues = () => {
   valuesContainer.innerHTML = "";
@@ -18,13 +22,13 @@ const drawMobileValues = () => {
     let element = document.createElement("li");
 
     let name = document.createElement("div");
-    name.innerHTML = `<strong>Nazwa: </strong>${value.name}`;
+    name.innerHTML = `<strong>Name: </strong>${value.name}`;
     let calories = document.createElement("div");
-    calories.innerHTML = `<strong>Kalorie: </strong>${value.calories}`;
+    calories.innerHTML = `<strong>Calories: </strong>${value.calories}`;
     let fat = document.createElement("div");
-    fat.innerHTML = `<strong>Tłuszcz: </strong>${value.fat}`;
+    fat.innerHTML = `<strong>Fat: </strong>${value.fat}`;
     let carbs = document.createElement("div");
-    carbs.innerHTML = `<strong>Węglowodany: </strong>${value.carbs}`;
+    carbs.innerHTML = `<strong>Carbs: </strong>${value.carbs}`;
 
     element.appendChild(name);
     element.appendChild(calories);
@@ -44,7 +48,7 @@ const drawDesktopValues = () => {
   let thead = document.createElement("thead");
 
   thead.innerHTML =
-    "<tr> <th>Nazwa</th>  <th>Kalorie</th>  <th>Tłuszcz</th>  <th>Węglowodany</th></tr>";
+    "<tr> <th>Name</th>  <th>Calories</th>  <th>Fat</th>  <th>Carbs</th></tr>";
 
   let tbody = document.createElement("tbody");
 
@@ -61,5 +65,10 @@ const drawDesktopValues = () => {
   valuesContainer.appendChild(table);
 };
 
-// drawDesktopValues();
-drawMobileValues();
+drawValues(desktopVieport.matches);
+
+desktopVieport.addListener((isDesktop) => {
+  drawValues(isDesktop.matches);
+});
+
+
