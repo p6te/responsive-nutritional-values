@@ -70,5 +70,3 @@ drawValues(desktopVieport.matches);
 desktopVieport.addListener((isDesktop) => {
   drawValues(isDesktop.matches);
 });
-
-
